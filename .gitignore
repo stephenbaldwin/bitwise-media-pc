@@ -1,0 +1,4 @@
+vendor/ruby
+vendor/cache
+.DS_Store
+
