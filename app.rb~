@@ -9,11 +9,11 @@ require 'win32ole'
 
 #session = Hallon::Session.initialize(IO.read('./spotify_appkey.key'))
 #session.login!('adamjhicks75', 'pololo')
+@itunes = WIN32OLE.new 'iTunes.Application'
 
 set :server, :thin
 set :static, true
 get '/togglePlay' do
-itunes = WIN32OLE.new 'iTunes.Application'
 	itunes.PlayPause
   
   #track = Hallon::Track.new("spotify:track:1ZPsdTkzhDeHjA5c2Rnt2I")
@@ -25,11 +25,9 @@ itunes = WIN32OLE.new 'iTunes.Application'
 end
 
 get '/nextTrack' do
-itunes = WIN32OLE.new 'iTunes.Application'
 	itunes.NextTrack
 end
 
 get '/previousTrack' do
-itunes = WIN32OLE.new 'iTunes.Application'
 	itunes.PreviousTrack
 end

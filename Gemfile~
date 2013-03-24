@@ -9,4 +9,4 @@ gem 'sinatra-cross_origin'
 gem 'faraday'
 gem 'em-proxy'
 gem 'hallon'
-gem 'hallon-openal', platform: :ruby
+gem 'hallon-openal', platfom: :ruby
